@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>QR Scanner</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="scanner-container">
+    <h2>📸 Live QR Scanner</h2>
+    <p>Show your QR Code in front of the camera</p>
+    
+    <div class="glass-box">
+      <video id="camera" autoplay></video>
+      <canvas id="canvas" hidden></canvas>
+    </div>
+
+    <p id="scanStatus">Scanning...</p>
+
+    <a href="/" class="glass-btn btn-blue mt-3">⬅ Back to Home</a>
+  </div>
+
+  <script src="{{ url_for('static', filename='jsqr.js') }}"></script>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
